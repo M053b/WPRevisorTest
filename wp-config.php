@@ -20,6 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+define('REVISR_GIT_PATH', 'https://github.com/M053b/testRevisr.git'); // Added by Revisr
 define( 'DB_NAME', 'bitnami_wordpress' );
 
 /** MySQL database username */
