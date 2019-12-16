@@ -1,4 +1,4 @@
-/*! elementor - v2.8.1 - 11-12-2019 */
+/*! elementor - v2.8.2 - 16-12-2019 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -142,7 +142,7 @@ module.exports = function (it) {
 
 /***/ }),
 
-/***/ 111:
+/***/ 112:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(51)('native-function-to-string', Function.toString);
@@ -262,6 +262,28 @@ module.exports = Array.isArray || function isArray(arg) {
 
 /***/ }),
 
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
+var $export = __webpack_require__(29);
+var $find = __webpack_require__(117)(5);
+var KEY = 'find';
+var forced = true;
+// Shouldn't skip holes
+if (KEY in []) Array(1)[KEY](function () { forced = false; });
+$export($export.P + $export.F * forced, 'Array', {
+  find: function find(callbackfn /* , that = undefined */) {
+    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+  }
+});
+__webpack_require__(72)(KEY);
+
+
+/***/ }),
+
 /***/ 162:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -299,28 +321,6 @@ __webpack_require__(29)({
 }, {
   exec: regexpExec
 });
-
-
-/***/ }),
-
-/***/ 17:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
-var $export = __webpack_require__(29);
-var $find = __webpack_require__(117)(5);
-var KEY = 'find';
-var forced = true;
-// Shouldn't skip holes
-if (KEY in []) Array(1)[KEY](function () { forced = false; });
-$export($export.P + $export.F * forced, 'Array', {
-  find: function find(callbackfn /* , that = undefined */) {
-    return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
-  }
-});
-__webpack_require__(72)(KEY);
 
 
 /***/ }),
@@ -511,7 +511,7 @@ var global = __webpack_require__(13);
 var hide = __webpack_require__(25);
 var has = __webpack_require__(46);
 var SRC = __webpack_require__(52)('src');
-var $toString = __webpack_require__(111);
+var $toString = __webpack_require__(112);
 var TO_STRING = 'toString';
 var TPL = ('' + $toString).split(TO_STRING);
 
@@ -792,7 +792,7 @@ __webpack_require__(225);
 
 __webpack_require__(68);
 
-__webpack_require__(17);
+__webpack_require__(15);
 
 (function ($) {
   var ElementorAdmin = elementorModules.ViewModule.extend({
@@ -1144,7 +1144,7 @@ __webpack_require__(17);
 "use strict";
 
 
-__webpack_require__(17);
+__webpack_require__(15);
 
 module.exports = elementorModules.ViewModule.extend({
   getDefaultSettings: function getDefaultSettings() {
