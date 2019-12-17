@@ -1,2 +1,4 @@
-/wp-config.php
+wp-content/cache/
+wp-content/cache/supercache/index.html
+wp-config.php
 .htaccess
