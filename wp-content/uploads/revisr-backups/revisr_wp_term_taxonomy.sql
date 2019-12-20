@@ -11,5 +11,5 @@ CREATE TABLE `wp_term_taxonomy` (
   KEY `taxonomy` (`taxonomy`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 LOCK TABLES `wp_term_taxonomy` WRITE;
-INSERT INTO `wp_term_taxonomy` VALUES ('1','1','category','','0','1'), ('3','3','nav_menu','','0','5');
+INSERT INTO `wp_term_taxonomy` VALUES ('1','1','category','','0','1'), ('3','3','nav_menu','','0','6');
 UNLOCK TABLES;

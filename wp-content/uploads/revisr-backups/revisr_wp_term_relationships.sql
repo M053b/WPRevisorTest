@@ -7,5 +7,5 @@ CREATE TABLE `wp_term_relationships` (
   KEY `term_taxonomy_id` (`term_taxonomy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 LOCK TABLES `wp_term_relationships` WRITE;
-INSERT INTO `wp_term_relationships` VALUES ('1','1','0'), ('100','3','0'), ('101','3','0'), ('102','3','0'), ('103','3','0'), ('104','3','0');
+INSERT INTO `wp_term_relationships` VALUES ('1','1','0'), ('100','3','0'), ('101','3','0'), ('102','3','0'), ('103','3','0'), ('104','3','0'), ('171','3','0');
 UNLOCK TABLES;
